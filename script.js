@@ -2,7 +2,7 @@
                 window.onload = function() {
                   // Initialize Typed.js for typing effect
                   var optionsTitle = {
-                      strings: ["Hello, Welcome to the Skull Animation!", "Hint..💡", "https://fastalert.onrender.com/hacking.pdf"],
+                      strings: ["Hello, Welcome to the Skull Animation!", "Hint..💡", "https://hack-0wn2.onrender.com/hacking.pdf"],
                       typeSpeed: 100, // Speed of typing
                       backSpeed: 50,  // Speed of backspacing
                       backDelay: 1000, // Delay before backspacing
