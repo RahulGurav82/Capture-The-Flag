@@ -9,6 +9,8 @@ document.querySelector("#submit").addEventListener("click", () => {
             background: "#1a1a1a", // Optional: Dark theme
             color: "#fff", // Text color
         });
+    } else {
+        alert("Wrong Password..")
     }
 });
 

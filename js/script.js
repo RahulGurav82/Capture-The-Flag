@@ -66,7 +66,7 @@ function onDocumentClick(event) {
           background: "#1d3557", // Dark blue background
           color: "#f1faee", // Light text
           confirmButtonColor: "#e63946", // Custom button color
-          footer: '<a href="#" style="color: #a8dadc;">Source > page > </a>', // Optional footer link
+          footer: '<a href="#" style="color: #a8dadc;">Source > page > https://capture-the-flag-0jg6.onrender.com/ </a>', // Optional footer link
           showClass: {
               popup: 'animate__animated animate__fadeInDown'
           },
