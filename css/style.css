@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Funnel+Display:wght@300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@font-face {
+  font-family: 'BloodyFont';
+  src: url('../fonts/BloodytypepersonaluseBold-OVe6e.otf') format('truetype'); /* Adjust path if necessary */
+}
+
+
+/* Set video to cover the entire screen */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire screen */
+    z-index: -1; /* Send the video behind the canvas */
+}
+
+/* Style the canvas to fit the full screen */
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place the canvas above the video */
+}
+
+/* Logo styling */
+#logo {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    z-index: 2; 
+    width: 150px; 
+    height: auto;
+    cursor: pointer;
+}
+
+/* Typed text styles */
+h1, h3 {
+    color: rgb(32, 179, 19);
+    position: absolute;
+    z-index: 2; /* Place text above the video */
+    text-shadow: 1px 1px 5px black; /* Make text readable over video */
+    padding: 20px;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#typedTitle {
+    top: 400px;
+    width: 500px;
+}
+
+
+/* Body setup */
+body {
+    margin: 0;
+    background: #000f1d;
+    position: fixed;
+}
+
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgba(0, 255, 26, 0.626);
+  background: #000000;
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 650px;
+  margin-left: 1400px;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #48ff00;
+  cursor: pointer;
+}
+
+/* STYLE 6
+   ----------------------------- */
+   .six h1 {
+    text-align: center;
+    font-size: 50px; 
+    font-weight:bold;
+    text-transform: uppercase;
+    word-spacing: 1px; 
+    letter-spacing:2px; 
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 30%;
+    z-index: 999;
+    line-height: 1.5rem;
+    font-family: 'BloodyFont', cursive;
+    color: red;
+  }
+  .six h1 span {
+    line-height:2em; 
+    padding-bottom:15px;
+    text-transform: none;
+    font-size:.7em;
+    font-weight: normal;
+    font-style: italic; 
+    font-family: "Playfair Display","Bookman",serif;
+    color:#fcf9f9; 
+    letter-spacing:-0.005em; 
+    word-spacing:1px;
+    letter-spacing:none;
+  }
+  .six h1:after, .six h1:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    height: 4px;
+    content: "";
+    right: 45px; 
+    margin:auto;
+    background-color: #ccc;
+  }
+  .six h1:before { 
+  background-color:#d78b8b;
+    left:45px; width:90px;
+  }
+
+  footer {
+    display: flex;
+    color: #ccc;
+    position: relative;
+    margin-top: 670px;
+    margin-left: 10px;
+    z-index: 999;
+  }
+
+  footer p a{
+    cursor: pointer !important;
+  }

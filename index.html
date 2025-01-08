@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hacker Mario</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Include Typed.js from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
@@ -13,37 +13,42 @@
         <source src="https://res.cloudinary.com/doajvgc5u/video/upload/v1732205430/bg_zyovq8.3gp" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
     <!-- Logo -->
-    <img id="logo" src="logo.png" alt="Logo">
-
+    <a href="./redirect/index.html">
+        <img id="logo" src="./images/logo.png" alt="Logo">
+    </a>
+    
     <div class="six">
-        <h1>Hacking Competition 2k24 <br>
-            <span>Organized By KV Pendharkar College Dombivali</span>
+        <h1 data-text="Hacking Competition">
+            Hacking Competition<br>
+            <span>Organized By KV Pendharkar <a id="college" style="color: white;">College </a>Dombivali</span>
         </h1>
     </div>
+    
 
     <!-- Typed.js Element -->
     <h1 id="typedTitle">
 
     </h1>
 
-    <button class="button-85" role="button">
-        <a href="./nope.txt">Robots.txt</a> 
+    <button class="button-85" role="button" onclick="window.location.href='./redirect/index1.html'">
+        Capture
     </button>
+    
     <!-- 3D Canvas/Animation -->
     <canvas id="three-canvas">
 
     </canvas>
-
     <footer>
         <p>Devoloped By 
-            <a href="https://portfolio-bzkt.onrender.com">@RahulGurav</a>
+            <a target="_blank" href="https://portfolio-bzkt.onrender.com">@RahulGurav</a>
         </p>
     </footer>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/script.js"></script>
 
 </body>
 </html>
