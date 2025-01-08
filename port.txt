@@ -1,1 +1,1 @@
-event key = "HACKED"
+explit password is "HACKED" Zip file name is "HACKED" and password is "JOHN"

@@ -59,14 +59,14 @@ function onDocumentClick(event) {
           title: "Hint Found!",
           html: `
               <p>The name of the file is the previous password.</p>
-              <p>Which Is Locate it in <b>Inspect</b> (right-click and inspect the element).</p>
+              <p>File Is Locate it in <b>Inspect</b> (right-click and inspect the element).</p>
           `,
           icon: "info",
           confirmButtonText: "Got it!",
           background: "#1d3557", // Dark blue background
           color: "#f1faee", // Light text
           confirmButtonColor: "#e63946", // Custom button color
-          footer: '<a href="#" style="color: #a8dadc;">Source > page > https://capture-the-flag-0jg6.onrender.com/ </a>', // Optional footer link
+          footer: '<a href="#" style="color: #a8dadc;">zip file pass : JOHN</a>', // Optional footer link
           showClass: {
               popup: 'animate__animated animate__fadeInDown'
           },
