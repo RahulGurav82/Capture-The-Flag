@@ -17,7 +17,7 @@ window.onload = function() {
   });
 
   document.querySelector("#college").addEventListener("click", ()=> {
-    window.location.href = "../redirect/index.html"; // Corrected navigation
+    window.location.href = "../redirect/index2.html"; // Corrected navigation
   });
                 
 }        
@@ -56,17 +56,15 @@ function onDocumentClick(event) {
 
     if (intersects.length > 0) {
       Swal.fire({
-          title: "Hint Found!",
+          title: "Flag Found!",
           html: `
-              <p>The name of the file is the previous password.</p>
-              <p>File Is Locate it in <b>Inspect</b> (right-click and inspect the element).</p>
+              <img src="https://flagcdn.com/w320/in.png" alt="India Flag" style="width: 100px; height: auto; margin-bottom: 10px;">
           `,
           icon: "info",
           confirmButtonText: "Got it!",
           background: "#1d3557", // Dark blue background
           color: "#f1faee", // Light text
           confirmButtonColor: "#e63946", // Custom button color
-          footer: '<a href="#" style="color: #a8dadc;">zip file pass : JOHN</a>', // Optional footer link
           showClass: {
               popup: 'animate__animated animate__fadeInDown'
           },
@@ -75,6 +73,7 @@ function onDocumentClick(event) {
           }
       });
   }
+  
   
 }
 
