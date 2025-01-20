@@ -53,16 +53,6 @@ body{
     z-index: 1;
 }
 
-.container .content p{
-    font-size: 30px;
-    color:#d4ff00;
-    text-shadow: 0 5px 10px #000;
-    padding: 25px 0;
-    border: 2px solid black;
-    -webkit-text-stroke: 1px black; /* Border around the text */
-    -moz-text-stroke: 1px black;    /* For older Firefox versions */
-}
-
 .container .content .btn{
     display: inline-block;
     height:50px;

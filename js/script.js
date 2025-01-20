@@ -1,5 +1,44 @@
 // Ensure the DOM is fully loaded before initializing Typed.js
+
+document.getElementById("logo-link").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default link action
+
+  Swal.fire({
+      title: "Enter Flag 2",
+      input: "text",
+      inputPlaceholder: "Enter the password",
+      inputAttributes: {
+          autocapitalize: "off"
+      },
+      icon: "question",
+      confirmButtonText: "Submit",
+      background: "#1d3557", // Dark blue background
+      color: "#f1faee", // Light text
+      confirmButtonColor: "#e63946", // Custom button color
+      showClass: {
+          popup: "animate__animated animate__fadeInDown"
+      },
+      hideClass: {
+          popup: "animate__animated animate__fadeOutUp"
+      },
+      preConfirm: (password) => {
+          if (password.toLowerCase() === "india") {
+              return true; // Password is correct
+          } else {
+              Swal.showValidationMessage("Incorrect password! Please try again.");
+              return false; // Password is incorrect
+          }
+      }
+  }).then((result) => {
+      if (result.isConfirmed) {
+          // Redirect to index.html if the password is correct
+          window.location.href = "./redirect/index.html";
+      }
+  });
+});
 window.onload = function() {
+
+
     // Initialize Typed.js for typing effect
     var optionsTitle = {
       strings: ["Hint..💡", "The secrets are hidden in College"],
@@ -11,10 +50,6 @@ window.onload = function() {
       
   var typedTitle = new Typed("#typedTitle", optionsTitle);
 
-  document.querySelector('#logo').addEventListener('click', function(event) {
-    event.preventDefault(); // This stops the default behavior
-    window.location.href = "../redirect/index.html"; // Corrected navigation
-  });
 
   document.querySelector("#college").addEventListener("click", ()=> {
     window.location.href = "../redirect/index2.html"; // Corrected navigation
@@ -22,18 +57,17 @@ window.onload = function() {
                 
 }        
         
-
 var renderer, scene, camera, group;
 var mouseX = 0;
-var mouseY= 0;
-        
+var mouseY = 0;
+
 var skull, leftEye, rightEye;
 var textMesh;
 var pointLights = [];
-            
+
 init();
-animate(); 
-        
+animate();
+
 var raycaster = new THREE.Raycaster();
 // Initialize raycaster and mouse
 var mouse = new THREE.Vector2();
@@ -44,6 +78,12 @@ document.addEventListener('click', onDocumentClick, false);
 function onDocumentClick(event) {
     event.preventDefault();
 
+    // Ensure necessary variables are initialized
+    if (!mouse || !raycaster || !camera || !leftEye || !rightEye) {
+        console.error("Required variables (mouse, raycaster, camera, or eye objects) are not initialized.");
+        return;
+    }
+
     // Convert mouse position to normalized device coordinates (-1 to +1)
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -51,33 +91,64 @@ function onDocumentClick(event) {
     // Update raycaster with camera and mouse position
     raycaster.setFromCamera(mouse, camera);
 
-    // Check for intersections
-    var intersects = raycaster.intersectObject(skull);
+    // Check for intersections with both eyes
+    const intersects = raycaster.intersectObjects([leftEye, rightEye]);
 
     if (intersects.length > 0) {
-      Swal.fire({
-          title: "Flag Found!",
-          html: `
-              <img src="https://flagcdn.com/w320/in.png" alt="India Flag" style="width: 100px; height: auto; margin-bottom: 10px;">
-          `,
-          icon: "info",
-          confirmButtonText: "Got it!",
-          background: "#1d3557", // Dark blue background
-          color: "#f1faee", // Light text
-          confirmButtonColor: "#e63946", // Custom button color
-          showClass: {
-              popup: 'animate__animated animate__fadeInDown'
-          },
-          hideClass: {
-              popup: 'animate__animated animate__fadeOutUp'
-          }
-      });
-  }
-  
-  
+        Swal.fire({
+            title: "Enter Flag 1",
+            input: "text",
+            inputPlaceholder: "Enter the password",
+            inputAttributes: {
+                autocapitalize: "off"
+            },
+            icon: "question",
+            confirmButtonText: "Submit",
+            background: "#1d3557", // Dark blue background
+            color: "#f1faee", // Light text
+            confirmButtonColor: "#e63946", // Custom button color
+            showClass: {
+                popup: "animate__animated animate__fadeInDown"
+            },
+            hideClass: {
+                popup: "animate__animated animate__fadeOutUp"
+            },
+            preConfirm: (password) => {
+                if (password.toLowerCase() === "america") {
+                    return true; // Password is correct
+                } else {
+                    Swal.showValidationMessage("Incorrect flag! Please try again.");
+                    return false; // Password is incorrect
+                }
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Show flag if the password is correct
+                Swal.fire({
+                    title: "Flag 2",
+                    html: `
+                        <p style="margin-bottom: 10px; color: #f1faee;">Next hint: Hacking is type of crime</p>
+                        <img src="https://flagcdn.com/w320/in.png" alt="India Flag" 
+                             style="width: 100px; height: auto; margin-bottom: 10px;">
+                    `,
+                    icon: "info",
+                    confirmButtonText: "Got it!",
+                    background: "#1d3557", // Dark blue background
+                    color: "#f1faee", // Light text
+                    confirmButtonColor: "#e63946", // Custom button color
+                    showClass: {
+                        popup: "animate__animated animate__fadeInDown"
+                    },
+                    hideClass: {
+                        popup: "animate__animated animate__fadeOutUp"
+                    }
+                });
+            }
+        });
+    }
 }
 
-        
+   
 
 function init() {
 // renderer

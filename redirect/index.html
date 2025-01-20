@@ -25,14 +25,32 @@
     <script>
         // Show popup on page load
         window.onload = () => {
+
             Swal.fire({
-                title: 'Welcome',
-                html: `
-                    <img src="https://flagcdn.com/w320/ru.png" alt="Russia Flag" style="width: 100px; height: auto; margin-bottom: 10px;">
-                    <p style="font-size: 16px; font-weight: bold;">Russia</p>
-                `,
-                confirmButtonText: 'OK'
-            });
+    title: 'Find the Last Flag Password',
+    html: `
+        <p style="font-size: 18px; font-weight: bold; color: #ff4d4d;">You must uncover the truth!</p>
+        <p style="font-size: 14px; color: #f1faee;">Hint: Think of the scariest place you've been...</p>
+    `,
+    icon: 'warning',
+    confirmButtonText: 'I Dare!',
+    background: '#1d1f20', // Dark horror background
+    color: '#f1faee', // Light text
+    confirmButtonColor: '#e63946', // Scary red button
+    showClass: {
+        popup: 'animate__animated animate__shakeX'
+    },
+    hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+    }
+}).then((result) => {
+    if (result.isConfirmed) {
+        // Close the popup
+        Swal.close();
+    }
+});
+
+
         };
 
         // Text parallax effect

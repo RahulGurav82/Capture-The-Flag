@@ -15,10 +15,19 @@
 <body>
     <div class="container">
         <h1 class="text">HACKED</h1>
-        <div class="content">
-            <p>You Are In Wrong Way. <br>Stay Focus :)</p>
-            <a href="../index.html" class="btn">go back to home</a>
+        <div class="content" style="text-align: center; background: #1d1f20; color: #f1faee; padding: 30px; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);">
+            <p style="font-size: 20px; font-weight: bold; margin-bottom: 20px;">
+                Find <span style="color: #e63946;">Flag 2</span>. <br> 
+                <span style="font-style: italic; color: #f4a261;">All Eyes Are Watching You :)</span>
+            </p>
+            <p style="font-size: 16px; margin-bottom: 25px;">
+                <strong>Hint:</strong> The truth lies where the darkness ends. Pay attention to what you see!
+            </p>
+            <a href="../index.html" class="btn" style="text-decoration: none; font-size: 18px; font-weight: bold; color: #1d1f20; background-color: #f1faee; padding: 10px 20px; border-radius: 5px; box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.2); transition: all 0.3s;">
+                Go Back to Home
+            </a>
         </div>
+        
         <img src="images/tree.png" class="tree" alt="">
     </div>
 
@@ -26,10 +35,10 @@
         // Show popup on page load
         window.onload = () => {
             Swal.fire({
-                title: 'Welcome',
+                title: 'Flag 1',
                 html: `
                     <img src="https://flagcdn.com/w320/us.png" alt="USA Flag" style="width: 100px; height: auto; margin-bottom: 10px;">
-                    <p style="font-size: 16px; font-weight: bold;">America</p>
+                    <p style="font-size: 16px; font-weight: bold;">New Zealand</p>
                 `,
                 confirmButtonText: 'OK'
             });
