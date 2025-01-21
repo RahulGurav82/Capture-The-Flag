@@ -27,28 +27,28 @@
         window.onload = () => {
 
             Swal.fire({
-    title: 'Find the Last Flag Password',
-    html: `
-        <p style="font-size: 18px; font-weight: bold; color: #ff4d4d;">You must uncover the truth!</p>
-        <p style="font-size: 14px; color: #f1faee;">Hint: Think of the scariest place you've been...</p>
-    `,
-    icon: 'warning',
-    confirmButtonText: 'I Dare!',
-    background: '#1d1f20', // Dark horror background
-    color: '#f1faee', // Light text
-    confirmButtonColor: '#e63946', // Scary red button
-    showClass: {
-        popup: 'animate__animated animate__shakeX'
-    },
-    hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-    }
-}).then((result) => {
-    if (result.isConfirmed) {
-        // Close the popup
-        Swal.close();
-    }
-});
+                title: 'Find the Last Flag Password',
+                html: `
+                    <p style="font-size: 18px; font-weight: bold; color: #ff4d4d;">You must uncover the truth!</p>
+                    <p style="font-size: 14px; color: #f1faee;">Hint: the secret is behind this...</p>
+                `,
+                icon: 'warning',
+                confirmButtonText: 'I Dare!',
+                background: '#1d1f20', // Dark horror background
+                color: '#f1faee', // Light text
+                confirmButtonColor: '#e63946', // Scary red button
+                showClass: {
+                    popup: 'animate__animated animate__shakeX'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to index.html
+                    window.location.href = '../index.html';
+                }
+            });
 
 
         };
